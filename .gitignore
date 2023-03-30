@@ -1,0 +1,9 @@
+*.egg-info
+__pycache__
+results/clean*
+notebooks
+triplet_dataset
+data/
+src/get_ratings.py
+src/get_similarity_ratings.py
+scripts/retired
