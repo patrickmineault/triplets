@@ -167,7 +167,7 @@ def fit_model(dataset, model, model_type, prompt, test, ordering=0):
     df[f"{model}_reasoning"] = [None] * len(df)
 
     orderings = [(0, 1, 2), (1, 2, 0), (2, 0, 1), (0, 2, 1), (1, 0, 2), (2, 1, 0)]
-    chosen_ordering = orderings[ordering]
+    chosen_ordering = orderings[ordering % len(orderings)]
     requests = []
     word_lists = []
     for i, row in df.iterrows():
